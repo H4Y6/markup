@@ -1,0 +1,45 @@
+@import "./utils/variables";
+
+@import "./utils/mixins";
+@import "./base/normalize";
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.logo {
+    color: getColor('accent');
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.72px;
+
+    &__span {
+        color: getColor('primary');
+    }
+}
+
+.container--align {
+    display: flex;
+}
+
+.nav,
+.contacts,
+.social-list {
+    display: none;
+}
+
+.mobile-menu__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.button__icon-close {
+    display: none;
+}

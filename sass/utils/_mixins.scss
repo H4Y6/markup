@@ -1,0 +1,5 @@
+@mixin list($paddingLeft: 0) {
+    list-style: none;
+    margin: 0;
+    padding-left: $paddingLeft;
+}
