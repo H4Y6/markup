@@ -1,45 +1,41 @@
 @import "./utils/variables";
-
 @import "./utils/mixins";
 @import "./base/normalize";
+@import "./base/reset";
+@import "./components/container";
+@import "./components/mobile-menu";
+@import "./components/logo";
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 15px;
+.header {
+    background-color: getColor('light');
 }
 
-.logo {
-    color: getColor('accent');
-    font-family: Raleway;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.72px;
+.header--container {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    &__span {
-        color: getColor('primary');
+.menu__link {
+    color: getColor('primary');
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &--active {
+        color: getColor('accent')
     }
 }
 
-.container--align {
-    display: flex;
+.contact__link-tel {
+    font-weight: 500;
+    line-height: normal;
 }
 
-.nav,
-.contacts,
-.social-list {
-    display: none;
-}
-
-.mobile-menu__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.button__icon-close {
-    display: none;
+.contact__link-mail {
+    color: getColor('primary');
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
