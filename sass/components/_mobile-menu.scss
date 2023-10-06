@@ -39,15 +39,21 @@
         letter-spacing: 0.8px;
     }
 
-    .contact__link-tel {
+    .contact__link--tel {
         color: #2196F3;
         font-size: 34px;
         letter-spacing: 0.68px;
     }
 
-    .contact__link-mail {
+    .contact__link--email {
+        color: getColor('secondary');
         font-size: 24px;
         letter-spacing: 0.48px;
+    }
+
+    .contact__icon-smartphone,
+    .contact__icon-email {
+        display: none;
     }
 
     .mobile-menu.is-open .nav,

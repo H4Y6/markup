@@ -5,37 +5,4 @@
 @import "./components/container";
 @import "./components/mobile-menu";
 @import "./components/logo";
-
-.header {
-    background-color: getColor('light');
-}
-
-.header--container {
-    display: flex;
-    height: 60px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu__link {
-    color: getColor('primary');
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-
-    &--active {
-        color: getColor('accent')
-    }
-}
-
-.contact__link-tel {
-    font-weight: 500;
-    line-height: normal;
-}
-
-.contact__link-mail {
-    color: getColor('primary');
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
+@import "./components/header";
