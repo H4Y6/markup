@@ -1,0 +1,124 @@
+.social-list,
+.mobile-menu__button {
+    display: none;
+}
+
+@media screen and (max-width:767.5px) {
+
+    .mobile-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        padding: 48px 40px;
+        background-color: #fff;
+
+        &.is-open {
+            transform: translateX(0);
+        }
+    }
+
+    .nav,
+    .contacts,
+    .social-list {
+        display: none;
+    }
+
+    .menu__item {
+        &+& {
+            margin-top: 32px;
+        }
+    }
+
+    .menu__link {
+        font-size: 40px;
+        letter-spacing: 0.8px;
+    }
+
+    .contact__link-tel {
+        color: #2196F3;
+        font-size: 34px;
+        letter-spacing: 0.68px;
+    }
+
+    .contact__link-mail {
+        font-size: 24px;
+        letter-spacing: 0.48px;
+    }
+
+    .mobile-menu.is-open .nav,
+    .mobile-menu.is-open .contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav {
+        margin-bottom: auto;
+    }
+
+    .contacts {
+        gap: 22px;
+        margin-bottom: 64px;
+    }
+
+    .social__item:not(:last-child) {
+        position: relative;
+        margin-right: 10px;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -5px;
+            content: "";
+            display: block;
+            width: 1px;
+            height: 22px;
+            background: rgba(33, 33, 33, 0.20);
+            ;
+        }
+    }
+
+    .social__link {
+        color: #2196F3;
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.22;
+        letter-spacing: 0.36px;
+    }
+
+    .mobile-menu.is-open .social-list {
+        display: flex;
+    }
+
+    .mobile-menu__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+
+        .mobile-menu.is-open+& {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            display: block;
+        }
+    }
+
+    .button__icon-close {
+        display: none;
+
+        .mobile-menu.is-open+.mobile-menu__button & {
+            display: flex;
+        }
+    }
+
+    .mobile-menu.is-open+.mobile-menu__button .button__icon-menu {
+        display: none;
+    }
+}
