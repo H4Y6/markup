@@ -44,8 +44,7 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -82,8 +81,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -192,8 +190,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -moz-appearance: button;
-       appearance: button;
+  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -232,8 +229,7 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -267,8 +263,7 @@ textarea {
    */
 [type=checkbox],
 [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -287,8 +282,7 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 [type=search] {
-  -moz-appearance: textfield;
-       appearance: textfield;
+  appearance: textfield;
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -346,15 +340,13 @@ template {
 }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -428,23 +420,16 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    display: -webkit-box;
-    display: -ms-flexbox;
+    transform: translateY(-100%);
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     padding: 48px 40px;
     background-color: #fff;
   }
   .mobile-menu.is-open {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   .nav,
   .contacts,
@@ -458,24 +443,24 @@ img {
     font-size: 40px;
     letter-spacing: 0.8px;
   }
-  .contact__link-tel {
+  .contact__link--tel {
     color: #2196F3;
     font-size: 34px;
     letter-spacing: 0.68px;
   }
-  .contact__link-mail {
+  .contact__link--email {
+    color: #757575;
     font-size: 24px;
     letter-spacing: 0.48px;
   }
+  .contact__icon-smartphone,
+  .contact__icon-email {
+    display: none;
+  }
   .mobile-menu.is-open .nav,
   .mobile-menu.is-open .contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .nav {
     margin-bottom: auto;
@@ -508,20 +493,12 @@ img {
     letter-spacing: 0.36px;
   }
   .mobile-menu.is-open .social-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .mobile-menu__button {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
   }
   .mobile-menu.is-open + .mobile-menu__button {
@@ -534,8 +511,6 @@ img {
     display: none;
   }
   .mobile-menu.is-open + .mobile-menu__button .button__icon-close {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .mobile-menu.is-open + .mobile-menu__button .button__icon-menu {
@@ -560,18 +535,34 @@ img {
 }
 
 .header--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 60px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header--container {
+    justify-content: start;
+    padding-top: 16px;
+    align-items: baseline;
+  }
+  .header--container .logo {
+    margin-right: 88px;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    margin-right: 117px;
+  }
+  .menu {
+    display: flex;
+    align-items: baseline;
+    gap: 50px;
+  }
+}
 .menu__link {
   color: #212121;
   font-style: normal;
@@ -582,14 +573,36 @@ img {
   color: #2196f3;
 }
 
-.contact__link-tel {
+.contacts {
+  display: flex;
   font-weight: 500;
   line-height: normal;
 }
+@media screen and (min-width: 768px) {
+  .contacts {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 12px;
+  }
+}
 
-.contact__link-mail {
-  color: #212121;
-  font-style: normal;
+.contact__link {
   font-weight: 500;
   line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .contact__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #757575;
+    font-size: 12px;
+    letter-spacing: 0.24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: flex;
+  }
 }/*# sourceMappingURL=main.css.map */
