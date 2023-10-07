@@ -1,5 +1,5 @@
 .header {
-    background-color: #d2eb78;
+    background-color: getColor('light');
 
     @media screen and (min-width:768px) {
         border-bottom: 1px #ececec solid;
