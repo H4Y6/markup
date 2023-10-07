@@ -20,6 +20,15 @@
             margin-right: 88px;
         }
     }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+
+        & .logo {
+            margin-right: 88px;
+        }
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -37,6 +46,7 @@
         display: flex;
         align-items: baseline;
         gap: 50px;
+        letter-spacing: 0.28px;
     }
 }
 
@@ -60,14 +70,18 @@
 }
 
 .contacts {
-    display: flex;
-    font-weight: 500;
-    line-height: normal;
 
     @media screen and (min-width:768px) {
+        display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         gap: 12px;
+    }
+
+    @media screen and (min-width:1200px) {
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 30px;
     }
 }
 
@@ -88,6 +102,12 @@
         color: getColor('secondary');
         font-size: 12px;
         letter-spacing: 0.24px;
+    }
+
+    @media screen and (min-width:1200px) {
+        gap: 10px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
     }
 }
 
