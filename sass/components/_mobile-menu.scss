@@ -107,6 +107,12 @@
         justify-content: center;
         align-items: center;
         background-color: transparent;
+        transition: fill $transition;
+
+        &:focus,
+        &:hover {
+            fill: getColor('accent')
+        }
 
         .mobile-menu.is-open+& {
             position: absolute;
