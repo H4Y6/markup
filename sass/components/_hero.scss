@@ -1,0 +1,54 @@
+.hero {
+    height: 400px;
+    background-color: #C4C4C4;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        image-set(url(../img/hero/hero-480.jpg) 1x, url(../img/hero/hero-480@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-position: 50% top;
+    background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        background-image:
+            linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            image-set(url(../img/hero/hero-768.jpg) 1x, url(../img/hero/hero-768@2x.jpg) 2x);
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 600px;
+        background-image:
+            linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            image-set(url(../../img/hero/hero-1600.jpg) 1x, url(../img/hero/hero-1600@2x.jpg) 2x);
+        background-size: 1600px;
+    }
+
+    &__container {
+        padding: 125px 84px;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            padding: 200px 450px;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 1.61;
+        letter-spacing: 1.56px;
+        text-transform: uppercase;
+    }
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.96px;
+    background-color: #2196F3;
+    color: #FFF;
+}
