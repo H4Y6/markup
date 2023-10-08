@@ -47,6 +47,8 @@
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.10);
+    outline: none;
+    ;
     border-radius: 50%;
     fill: #000;
     background-color: getColor('light');
@@ -61,17 +63,64 @@
 }
 
 .order__form-field {
+    position: relative;
     display: block;
-    width: 100%;
-    height: 40px;
 
     &:not(:last-child) {
         margin-bottom: 28px;
     }
 }
 
-.order-input {
+.order__input {
     display: block;
+    height: 40px;
     width: 100%;
-    height: 100%;
+    padding: 0 0 0 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+
+    &:focus,
+    .order__form-field:hover & {
+        border-color: getColor('accent');
+    }
+}
+
+.order__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform $transition, fill $transition;
+    left: 12px;
+    fill: getColor('primary');
+
+    .order__input:focus+&,
+    .order__form-field:hover & {
+        fill: getColor('accent');
+    }
+}
+
+.order__label {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    transform: translateY(-4px);
+    color: getColor('secondary');
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: 0.12px;
+
+    .order__input:focus~&,
+    .order__form-field:hover & {
+        color: getColor('accent');
+    }
+}
+
+.order__input--text {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    color: rgba(117, 117, 117, 0.5);
+    line-height: normal;
+    letter-spacing: 0.14px;
 }
