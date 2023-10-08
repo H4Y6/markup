@@ -21,14 +21,16 @@
     transition: transform $transition;
     padding: 40px;
     width: calc(100% - 30px);
-
     max-width: 450px;
-
     height: 609px;
     text-align: center;
     border-radius: 4px;
     background-color: getColor('light');
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    @media screen and (min-width:1200px) {
+        max-width: 528px;
+    }
 }
 
 .modal__title {
@@ -160,6 +162,12 @@
     font-size: 12px;
     line-height: normal;
     letter-spacing: 0.36px;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.42px;
+    }
 }
 
 .consent__link {
