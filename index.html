@@ -65,6 +65,56 @@
                 <button class="button" type="submit">Make your order</button>
             </div>
         </section>
+
+        <div class="overlay">
+            <div class="modal">
+                <b class="modal__title">Let us know your phone to call you</b>
+                <button class="modal__close-button"><svg class="-modal__icon-close" width="18" height="18">
+                        <use href="./img/sprite.svg#icon-close"></use>
+                    </svg></button>
+                <form class="js-order-form">
+
+                    <label class="order__form-field"><input class="order__input" type="text" name="name"
+                            autocomplete="name">
+                        <span><svg class="order__icon" width="18" height="18">
+                                <use href=""></use>
+                            </svg></span>
+                        <span class="order-label">Name</span>
+                    </label>
+
+                    <label class="order__form-field"><input class="order__input" type="text" name="tel"
+                            autocomplete="tel">
+                        <span><svg class="order__icon" width="18" height="18">
+                                <use href=""></use>
+                            </svg></span>
+                        <span class="order-label">Tel</span>
+                    </label>
+
+                    <label class="order__form-field"><input class="order__input" type="email" name="email"
+                            autocomplete="email">
+                        <span><svg class="order__icon" width="18" height="18">
+                                <use href=""></use>
+                            </svg></span>
+                        <span class="order-label">Email</span>
+                    </label>
+
+                    <label class="order__form-field"><textarea class="order__input" type="text" name="comment"
+                            placeholder="Type your text here"></textarea>
+                        <span class="order-label">Your comment</span>
+                    </label>
+
+                    <label class="consent__form-field"><input type="checkbox" name="consent" value="consent"> <span
+                            class="consent__icon">
+                            <svg width="16" height="15">
+                                <use href="./img/sprite.svg#icon-check"></use>
+                            </svg></span>
+                        <span class="onsent__text">I would like information and offers <a href=" "
+                                class="consent__link">Privacy statement </a> </span></label>
+                    <button class="button" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
     </main>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="

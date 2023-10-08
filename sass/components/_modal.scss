@@ -1,0 +1,58 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: opacity $transition;
+    background-color: rgba(0, 0, 0, 0.20);
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform $transition;
+    padding: 40px;
+    width: 450px;
+    height: 609px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: getColor('light');
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.modal__title {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    margin-bottom: 30px;
+}
+
+.modal__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    @include centeredFlex();
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 50%;
+    fill: #000;
+    background-color: getColor('light');
+    transform: scale(1);
+    transition: fill $transition, transform $transition;
+
+    &:focus,
+    :hover {
+        fill: getColor('accent');
+        transform: scaleY(1.1);
+    }
+}
