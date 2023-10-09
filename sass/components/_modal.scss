@@ -30,6 +30,7 @@
 
     @media screen and (min-width:1200px) {
         max-width: 528px;
+        height: 581px;
     }
 }
 
@@ -39,6 +40,10 @@
     line-height: 1.5;
     letter-spacing: 0.6px;
     margin-bottom: 30px;
+
+    @media screen and (min-width:1200px) {
+        line-height: 1.15;
+    }
 }
 
 .modal__close-button {
@@ -81,6 +86,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
+    transition: border-color $transition;
 
     &:focus,
     .order__form-field:hover & {
@@ -109,8 +115,9 @@
     transform: translateY(-4px);
     color: getColor('secondary');
     font-size: 12px;
-    line-height: normal;
+    line-height: 1.15;
     letter-spacing: 0.12px;
+    transition: color $transition;
 
     .order__input:focus~&,
     .order__form-field:hover & {
@@ -124,7 +131,7 @@
     margin-bottom: 20px;
     resize: none;
     color: rgba(117, 117, 117, 0.5);
-    line-height: normal;
+    line-height: 1.15;
     letter-spacing: 0.14px;
 }
 
@@ -160,7 +167,7 @@
 .consent__text {
     color: getColor('secondary');
     font-size: 12px;
-    line-height: normal;
+    line-height: 1.15;
     letter-spacing: 0.36px;
 
     @media screen and (min-width: 1200px) {
@@ -171,5 +178,5 @@
 }
 
 .consent__link {
-    color: currentColor;
+    color: getColor('accent');
 }

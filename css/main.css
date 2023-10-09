@@ -746,6 +746,7 @@ img {
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
+    height: 581px;
   }
 }
 
@@ -755,6 +756,11 @@ img {
   line-height: 1.5;
   letter-spacing: 0.6px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .modal__close-button {
@@ -796,6 +802,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  transition: border-color 250ms cubic-bezier(0, 0.2, 0.4, 1);
 }
 .order__input:focus, .order__form-field:hover .order__input {
   border-color: #2196f3;
@@ -820,8 +827,9 @@ img {
   transform: translateY(-4px);
   color: #757575;
   font-size: 12px;
-  line-height: normal;
+  line-height: 1.15;
   letter-spacing: 0.12px;
+  transition: color 250ms cubic-bezier(0, 0.2, 0.4, 1);
 }
 .order__input:focus ~ .order__label, .order__form-field:hover .order__label {
   color: #2196f3;
@@ -833,7 +841,7 @@ img {
   margin-bottom: 20px;
   resize: none;
   color: rgba(117, 117, 117, 0.5);
-  line-height: normal;
+  line-height: 1.15;
   letter-spacing: 0.14px;
 }
 
@@ -869,7 +877,7 @@ img {
 .consent__text {
   color: #757575;
   font-size: 12px;
-  line-height: normal;
+  line-height: 1.15;
   letter-spacing: 0.36px;
 }
 @media screen and (min-width: 1200px) {
@@ -881,5 +889,5 @@ img {
 }
 
 .consent__link {
-  color: currentColor;
+  color: #2196f3;
 }/*# sourceMappingURL=main.css.map */
