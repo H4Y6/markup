@@ -1,4 +1,4 @@
-.social-list,
+.soc-list,
 .mobile-menu__button {
     display: none;
 }
@@ -24,7 +24,7 @@
 
     .nav,
     .contacts,
-    .social-list {
+    .soc-list {
         display: none;
     }
 
@@ -71,7 +71,7 @@
         margin-bottom: 64px;
     }
 
-    .social__item:not(:last-child) {
+    .soc__item:not(:last-child) {
         position: relative;
         margin-right: 10px;
 
@@ -88,7 +88,7 @@
         }
     }
 
-    .social__link {
+    .soc__link {
         color: #2196F3;
         font-family: Roboto;
         font-size: 18px;
@@ -98,7 +98,7 @@
         letter-spacing: 0.36px;
     }
 
-    .mobile-menu.is-open .social-list {
+    .mobile-menu.is-open .soc-list {
         display: flex;
     }
 

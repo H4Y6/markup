@@ -590,7 +590,7 @@ img {
     display: flex;
   }
 }
-.social-list,
+.soc-list,
 .mobile-menu__button {
   display: none;
 }
@@ -613,7 +613,7 @@ img {
   }
   .nav,
   .contacts,
-  .social-list {
+  .soc-list {
     display: none;
   }
   .menu__item + .menu__item {
@@ -649,11 +649,11 @@ img {
     gap: 22px;
     margin-bottom: 64px;
   }
-  .social__item:not(:last-child) {
+  .soc__item:not(:last-child) {
     position: relative;
     margin-right: 10px;
   }
-  .social__item:not(:last-child)::after {
+  .soc__item:not(:last-child)::after {
     position: absolute;
     top: 0;
     right: -5px;
@@ -663,7 +663,7 @@ img {
     height: 22px;
     background: rgba(33, 33, 33, 0.2);
   }
-  .social__link {
+  .soc__link {
     color: #2196F3;
     font-family: Roboto;
     font-size: 18px;
@@ -672,7 +672,7 @@ img {
     line-height: 1.22;
     letter-spacing: 0.36px;
   }
-  .mobile-menu.is-open .social-list {
+  .mobile-menu.is-open .soc-list {
     display: flex;
   }
   .mobile-menu__button {
@@ -1070,11 +1070,11 @@ img {
   color: #757575;
 }
 
-.icon-social-list {
+.social-list {
   display: flex;
   gap: 10px;
 }
-.team__item .icon-social-list {
+.team__item .social-list {
   justify-content: center;
 }
 
@@ -1099,4 +1099,46 @@ img {
 }
 .social__item:focus-within .social__icon, .social__item:hover .social__icon {
   fill: #fff;
+}
+
+.client-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 30px;
+}
+
+.client__item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .client__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}
+
+.client__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid #AFB1B8;
+  transition: border 250ms cubic-bezier(0, 0.2, 0.4, 1);
+  outline: none;
+}
+.client__link:focus, .client__link:hover {
+  border-color: #2196f3;
+}
+
+.client__icon {
+  fill: #AFB1B8;
+  transition: fill 250ms cubic-bezier(0, 0.2, 0.4, 1);
+}
+.client__link:focus .client__icon, .client__link:hover .client__icon {
+  fill: #2196f3;
 }/*# sourceMappingURL=main.css.map */
