@@ -1,3 +1,16 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -408,6 +421,10 @@ img {
   .container {
     width: 1200px;
   }
+}
+
+.section {
+  padding: 60px 0;
 }
 
 .logo {
@@ -890,4 +907,57 @@ img {
 
 .consent__link {
   color: #2196f3;
+}
+
+.specific-list {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.42px;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .specific-list {
+    flex-flow: row wrap;
+  }
+}
+
+.specific__item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .specific__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .specific__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.specific__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
+}
+
+.specific__title {
+  text-align: center;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .specific__title {
+    text-align: left;
+  }
+}
+
+.specific__text {
+  line-height: 1.71;
+  color: #757575;
 }/*# sourceMappingURL=main.css.map */
