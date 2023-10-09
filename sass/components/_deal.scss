@@ -1,0 +1,22 @@
+.deal-list {
+    display: flex;
+    gap: 30px;
+}
+
+.deal__item {
+    position: relative;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.deal__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    @include centeredFlex();
+    line-height: 1.15;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.80);
+    color: getColor('light');
+}
