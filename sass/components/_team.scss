@@ -25,7 +25,6 @@
         width: calc((100% - 3 * 30px) / 4);
     }
 
-
     @media screen and (max-width:768px) {
         margin-top: 30px;
     }
@@ -53,7 +52,7 @@
     }
 }
 
-.icon-social-list {
+.social-list {
     display: flex;
     gap: 10px;
 
@@ -61,8 +60,6 @@
         justify-content: center;
     }
 }
-
-
 
 .social__item {
     @include centeredFlex();
