@@ -1,13 +1,15 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-
+@import "./utils/visually-hidden";
 @import "./base/normalize";
 @import "./base/reset";
 
 @import "./components/container";
+@import "./components/section";
 @import "./components/logo";
 @import "./components/header";
 @import "./components/mobile-menu";
 @import "./components/hero";
 @import "./components/button";
 @import "./components/modal";
+@import "./components/specifics";
