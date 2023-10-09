@@ -1091,6 +1091,10 @@ img {
   background-color: #2196f3;
 }
 
+.social__link {
+  outline: none;
+}
+
 .social__icon {
   width: 20px;
   height: 20px;
