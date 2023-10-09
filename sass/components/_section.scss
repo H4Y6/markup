@@ -16,8 +16,13 @@
 
 .section__title {
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.15;
-    letter-spacing: 1.08px;
+    letter-spacing: 0.84px;
     margin-bottom: 50px;
+
+    @media screen and (min-width:1200px) {
+        font-size: 36px;
+        letter-spacing: 1.08px;
+    }
 }
