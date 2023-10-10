@@ -96,6 +96,7 @@
         font-weight: 500;
         line-height: 1.22;
         letter-spacing: 0.36px;
+        outline: none;
     }
 
     .mobile-menu.is-open .soc-list {
@@ -107,6 +108,7 @@
         justify-content: center;
         align-items: center;
         background-color: transparent;
+        outline: none;
         transition: fill $transition;
 
         &:focus,
