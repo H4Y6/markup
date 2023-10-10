@@ -5,20 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -37,7 +23,7 @@
                         <li class="menu__item"><a href="./index.html" class="menu__link">Studio</a>
                         </li>
                         <li class="menu__item"><a href="./portfolio.html"
-                                class="menu__link menu__link--active">Portfolio</a></li>
+                                class="menu__link  menu__link--active">Portfolio</a></li>
                         <li class="menu__item"><a href="./contacts.html" class="menu__link">Contacts</a></li>
                     </ul>
                 </nav>
@@ -54,11 +40,11 @@
                             </svg>info@devstudio.com</a>
                     </li>
                 </ul>
-                <ul class="social-list">
-                    <li class="social__item"><a href="Instagram" class="social__link">Instagram</a></li>
-                    <li class="social__item"><a href="Twitter" class="social__link">Twitter</a></li>
-                    <li class="social__item"><a href="Facebook" class="social__link">Facebook</a></li>
-                    <li class="social__item"><a href="LinkedIn" class="social__link">LinkedIn</a></li>
+                <ul class="soc-list">
+                    <li class="soc__item"><a href="Instagram" class="soc__link">Instagram</a></li>
+                    <li class="soc__item"><a href="Twitter" class="soc__link">Twitter</a></li>
+                    <li class="soc__item"><a href="Facebook" class="soc__link">Facebook</a></li>
+                    <li class="soc__item"><a href="LinkedIn" class="soc__link">LinkedIn</a></li>
                 </ul>
             </div>
 
@@ -74,12 +60,64 @@
     </header>
 
     <main>
-        <section class="">
-            <div class="container">
 
-            </div>
-        </section>
     </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__address">
+                <a href="" class="logo footer--logo">Web<span class="logo__span footer--logo__span">Studio</span></a>
+                <address>
+                    <p class="address__text">Common str., 7, EC-K0H London</p>
+                    <ul class="address-list">
+                        <li class="address__email">info@commonwealth.uk</li>
+                        <li>+44 22 7744 6611</li>
+                    </ul>
+                </address>
+            </div>
+            <div class="footer__social">
+                <b class="footer__title">Join us</b>
+                <ul class="social-list footer__social-list">
+                    <li class="social__item footer-social__item"><a href="" class="social__link">
+                            <svg class="social__icon footer-social__icon">
+                                <use href="./img/sprite.svg#icon-instagram"></use>
+                            </svg></a>
+                    </li>
+                    <li class="social__item footer-social__item"><a href="" class="social__link">
+                            <svg class="social__icon footer-social__icon">
+                                <use href="./img/sprite.svg#icon-twitter"></use>
+                            </svg></a>
+                    </li>
+                    <li class="social__item footer-social__item"><a href="" class="social__link">
+                            <svg class="social__icon footer-social__icon">
+                                <use href="./img/sprite.svg#icon-facebook"></use>
+                            </svg></a>
+                    </li>
+                    <li class="social__item footer-social__item"><a href="" class="social__link">
+                            <svg class="social__icon footer-social__icon">
+                                <use href="./img/sprite.svg#icon-linkedin"></use>
+                            </svg></a>
+                    </li>
+                </ul>>
+            </div>
+
+            <div class="footer__form-part">
+                <b class="footer__title">Sign in for email</b>
+
+                <form class="footer__form" enctype="text/plain">
+                    <input class="form__input" type="email" name="email" id="email" placeholder="E-mail">
+                    <button class="button footer__button">Sign in <svg width="24" height="24">
+                            <use href="./img/sprite.svg#icon-send"></use>
+                        </svg></button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
