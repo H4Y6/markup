@@ -1,0 +1,92 @@
+.footer {
+    background-color: #2F303A;
+}
+
+// Footer address part
+
+.footer__address {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.footer--logo {
+    display: block;
+    margin-bottom: 20px;
+
+    &__span {
+        color: getColor('light');
+    }
+}
+
+.address__text {
+    color: getColor('light');
+    font-style: normal;
+    margin-bottom: 8px;
+}
+
+.address-list {
+    color: rgba(255, 255, 255, 0.60);
+    font-style: normal;
+}
+
+.address__email {
+    margin-bottom: 8px;
+}
+
+//  Footer social icon part
+
+.footer__social {
+    @extend .footer__address;
+}
+
+.footer__title {
+    display: block;
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+    color: getColor('light');
+    margin-bottom: 20px;
+}
+
+
+.footer__social-list {
+    @include centeredFlex();
+}
+
+.footer-social__icon {
+    color: getColor('light');
+}
+
+.footer-social__item {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+// footer form part
+
+.footer__form {
+    text-align: center;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: 50px;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.48px;
+    color: rgba(255, 255, 255, 0.60);
+    background-color: #2f303a;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.footer__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
