@@ -1,9 +1,3 @@
-@mixin list($paddingLeft: 0) {
-    list-style: none;
-    margin: 0;
-    padding-left: $paddingLeft;
-}
-
 @mixin centeredFlex($displayType: flex, $justify-content: center, $align-items: center) {
     display: $displayType;
     justify-content: $justify-content;
