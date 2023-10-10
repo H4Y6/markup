@@ -56,6 +56,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    outline: none;
     transition: color $transition;
 
     &--active {
@@ -88,6 +89,7 @@
 .contact__link {
     font-weight: 500;
     line-height: normal;
+    outline: none;
     transition: color $transition;
 
     &:focus,
