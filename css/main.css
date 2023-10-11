@@ -1340,11 +1340,31 @@ img {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
 .gallery__card {
   width: 100%;
 }
 .gallery__card:not(:last-child) {
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .gallery__card {
+    margin-bottom: 0;
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__card {
+    margin-bottom: 0;
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .gallery__link {
@@ -1354,6 +1374,7 @@ img {
 .card__img {
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .card__overlay {
@@ -1363,7 +1384,6 @@ img {
   opacity: 0;
   transition: transform 250ms cubic-bezier(0, 0.2, 0.4, 1), opacity 250ms cubic-bezier(0, 0.2, 0.4, 1);
   height: 100%;
-  max-width: 450px;
   padding: 77px 24px;
   font-size: 18px;
   line-height: 1.55;
@@ -1375,10 +1395,16 @@ img {
   transform: translateY(0);
   opacity: 1;
 }
+@media screen and (min-width: 1200px) {
+  .card__overlay {
+    padding: 63px 24px;
+  }
+}
 
 .card__description {
   border: 1px solid #EEE;
   background: #FFF;
+  padding: 20px 24px;
 }
 
 .description__title {
