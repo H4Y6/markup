@@ -7,6 +7,7 @@
 
     .mobile-menu {
         position: absolute;
+        z-index: 1;
         top: 0;
         left: 0;
         transform: translateY(-100%);
@@ -118,6 +119,7 @@
 
         .mobile-menu.is-open+& {
             position: absolute;
+            z-index: 1;
             top: 14px;
             right: 14px;
             display: block;

@@ -40,3 +40,64 @@
 }
 
 // .portfolio__galery-list {}
+
+.gallery__card {
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.gallery__link {
+    outline: none;
+}
+
+.card__img {
+    position: relative;
+    overflow: hidden;
+}
+
+.card__overlay {
+    position: absolute;
+    top: 0;
+    transform: translateY(130%);
+    opacity: 0;
+    transition: transform $transition, opacity $transition;
+    height: 100%;
+    max-width: 450px;
+    padding: 77px 24px;
+
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.54px;
+    color: getColor('light');
+    background: rgba(33, 150, 243, 0.90);
+
+    .gallery__link:focus &,
+    .gallery__link:hover & {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card__description {
+    border: 1px solid #EEE;
+    background: #FFF;
+}
+
+.description__title {
+    display: block;
+    color: getColor('primary');
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 1.08px;
+    margin-bottom: 4px;
+}
+
+.description__text {
+    color: getColor('secondary');
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.48px;
+}
